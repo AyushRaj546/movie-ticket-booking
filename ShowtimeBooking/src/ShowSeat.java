@@ -16,6 +16,14 @@ public class ShowSeat {
     public boolean isAvailable() {
         return status == ShowSeatStatus.Available;
     }
-    public void book(){}
-    public void cancel(){}
+    public void book(){
+        if (!isAvailable())
+        {
+            throw new IllegalStateException("Seat" + seat.getSeatNumber() + "is already booked");
+        }
+        status = ShowSeatStatus.Booked;
+    }
+    public void cancel(){
+        status = ShowSeatStatus.Available;
+    }
 }
