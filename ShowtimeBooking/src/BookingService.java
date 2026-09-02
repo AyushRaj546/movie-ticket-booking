@@ -5,7 +5,7 @@ public class BookingService {
     private PriceCalculator priceCalculator;
     private TicketPrinter ticketPrinter;
 
-    public BookingService() {
+    public BookingService(PriceCalculator priceCalculator, TicketPrinter ticketPrinter) {
         this.priceCalculator = new PriceCalculator();
         this.ticketPrinter = new TicketPrinter();
     }
