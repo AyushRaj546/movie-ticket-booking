@@ -156,14 +156,20 @@ public class Main {
         System.out.println("Your bookings:");
         for (int i = 0; i < allBookings.size(); i++) {
             Booking b = allBookings.get(i);
-            System.out.println((i+1) + ". " + b.getBookingID() + " - " + b.getShow().getMovie().getTitle() +
-                    " - " + b.getStatus());
+            System.out.println((i + 1) + ". " + b.getBookingID() + " - " +
+                    b.getShow().getMovie().getTitle() + " - " + b.getStatus());
         }
-        System.out.print("Enter booking number to cancel: ");
-        int idx = scanner.nextInt() - 1;
-        scanner.nextLine();
+        System.out.print("Enter booking number to cancel (1, 2, 3...): ");
+        String input = scanner.nextLine().trim();
+        int idx;
+        try {
+            idx = Integer.parseInt(input) - 1;
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a number.");
+            return;
+        }
         if (idx < 0 || idx >= allBookings.size()) {
-            System.out.println("Invalid.");
+            System.out.println("Invalid booking number.");
             return;
         }
         Booking toCancel = allBookings.get(idx);

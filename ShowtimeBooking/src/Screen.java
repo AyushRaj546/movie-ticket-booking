@@ -9,7 +9,7 @@ public class Screen {
     public Screen(int screenNumber, int rows, int columns){
         this.screenNumber = screenNumber;
         this.seats = new ArrayList<>();
-        for(int row = 1; row <= rows; row++)
+        for(int row = 0; row <= rows; row++)
         {
             char rowLetter = (char) ('A' +  row);
             for (int col = 1; col <= columns; col++)
