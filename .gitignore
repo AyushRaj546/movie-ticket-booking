@@ -1,0 +1,25 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Compiled output
+out/
+target/
+bin/
+*.class
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
