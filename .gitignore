@@ -1,6 +1,7 @@
 # IntelliJ IDEA
 .idea/
 *.iml
+**/*.iml
 
 # Compiled output
 out/
@@ -11,15 +12,3 @@ bin/
 # OS junk
 .DS_Store
 Thumbs.db
-desktop.ini
-
-# VS Code
-.vscode/
-
-# Eclipse
-.classpath
-.project
-.settings/
-
-# Logs
-*.log
